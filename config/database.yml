@@ -1,0 +1,9 @@
+
+development:
+  adapter: postgresql
+  database: fotos_development
+
+test:
+  adapter: postgresql
+  database: fotos_test
+
