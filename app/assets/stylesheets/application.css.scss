@@ -17,9 +17,27 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 60px;
+   font-family: 'Open Sans', sans-serif;
+ }
+ .footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   /* Set the fixed height of the footer here */
+   height: 60px;
+ }
+
+ .footer a {
+   color: rgb(34, 34, 34);
+   font-size: 12px;
+ }
 
 h1 {
   font-family: 'Bitter', serif;
@@ -40,7 +58,7 @@ a:hover {
   display: block;
 }
 
-.nav {
+.nav-header {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,3 +69,13 @@ a:hover {
   background-color: #fff;
   border-bottom: 2px solid rgb(234, 234, 234);
 }
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+#footer {
+  background-color: #eee;
+}
+

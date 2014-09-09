@@ -9,23 +9,44 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar nav-style">
+  <div id="wrap">
+    <nav class="navbar nav-style">
+      <div class="container">
+        <div class="site-title text-center">
+          <h1><a href="#">Fotos</a></h1>
+        </div>
+        <div class="main-nav">
+          <ul class="nav-header nav">
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
   <div class="container">
-    <div class="site-title text-center">
-      <h1><a href="#">Fotos</a></h1>
-    </div>
-    <div class="main-nav">
-      <ul class="nav">
-        <li><a href="#">Home</a></li>
+
+    <%= yield %>
+
+  </div>
+
+
+  <div class="footer">
+    <div class="container">
+      <p class="pull-right">&copy; 2014 Diego Avalon</p>
+      <ul class="nav nav-pills pull-left">
+        <li class="disabled"><a href="#"></a></li>
         <li><a href="#">About</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
+  </div>
 
   </div>
-</nav>
-
-<%= yield %>
-
 </body>
 </html>
