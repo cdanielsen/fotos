@@ -13,12 +13,18 @@
     <nav class="navbar nav-style">
       <div class="container">
         <div class="site-title text-center">
-          <h1><a href="#">Fotos</a></h1>
+          <h1><%= link_to "Fotos", root_path %></h1>
         </div>
         <div class="main-nav">
           <ul class="nav-header nav">
-            <li><a href="#">Signup</a></li>
-            <li><a href="#">Login</a></li>
+            <% if current_user %>
+              <li>Hello, <%= current_user.name %></li>
+              <li class="logout"><%= link_to "Log Out", logout_path, method: "get" %></li>
+
+            <% else %>
+              <li><%= link_to "Signup", signup_path %></li>
+              <li><%= link_to "Log In", login_path %></li>
+            <% end %>
           </ul>
         </div>
         <hr>
@@ -27,7 +33,15 @@
 
 
   <div class="container">
-
+    <% if flash[:alert] %>
+        <div class="alert alert-info alert-dismissable" role="alert">
+          <%= flash[:alert] %>
+        </div>
+      <% elsif flash[:notice] %>
+        <div class="alert alert-success alert-dismissable" role="alert">
+        <%= flash[:notice] %>
+        </div>
+      <% end %>
     <%= yield %>
 
   </div>
@@ -36,7 +50,7 @@
   <div class="footer">
     <div class="container">
       <hr>
-      <p class="pull-right">&copy; 2014 Diego Avalon</p>
+      <p class="pull-right">&copy; 2014 Diego Avalon & Christian Danielsen</p>
       <ul class="nav nav-pills pull-left">
         <li class="disabled"><a href="#"></a></li>
         <li><a href="#">About</a></li>
