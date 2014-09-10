@@ -46,6 +46,10 @@ a:hover {
   display: block;
 }
 
+.site-title h1 {
+  font-size: 26px;
+}
+
 .nav-header {
   display: flex;
   flex-direction: row;
@@ -87,4 +91,32 @@ a:hover {
 
 .logout {
   margin-left: 20px;
+}
+
+.user-home {
+  padding-top: 70px;
+}
+
+.user-controls {
+  margin-top: 40px;
+}
+
+.user-controls button {
+  margin: 0 15px;
+}
+
+.btn-lg {
+  padding: 10px 40px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.headline {
+  letter-spacing: 1.5;
+  line-height: 1.3em;
+}
+
+.user-name:hover {
+  text-decoration: underline
 }

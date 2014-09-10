@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fotos | Design Portfolio of Diego Avalon</title>
+  <title>Fotos | Minimal, Clean, and Free Portfolio creator for Designers</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -18,7 +18,7 @@
         <div class="main-nav">
           <ul class="nav-header nav">
             <% if current_user %>
-              <li>Hello, <%= current_user.name %></li>
+              Hello,&nbsp <%= link_to "#{current_user.name}", user_path(current_user), class: "user-name" %>
               <li class="logout"><%= link_to "Log Out", logout_path, method: "get" %></li>
 
             <% else %>
